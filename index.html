@@ -62,7 +62,7 @@
         }
 
         .card-inside {
-            background: url(./Sau.png);
+            background-image: url(./Sau1.png);
             background-size: cover;
             background-position: right;
             transform: rotateY(180deg);
@@ -107,6 +107,35 @@
             margin: 0 auto;
             color: white;
             animation: bounce 2s infinite;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        .left-side,
+        .right-side {
+            display: block;
+            width: 100%;
+            padding: 0.5rem;
+        }
+
+        .left-side {
+            width: 100%;
+        }
+
+        .right-side>img {
+            width: 100%;
+            height: 90%;
+            object-fit: cover;
+            object-position: top;
+            border-radius: 5%;
+            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.5));
         }
 
         @keyframes bounce {
@@ -180,7 +209,7 @@
 
         /* Inside card styling */
         .card-title {
-            font-size: 1.875rem;
+            font-size: 1.575rem;
             font-weight: bold;
             text-align: center;
             color: #db2777;
@@ -195,14 +224,14 @@
         }
 
         .card-text {
-            font-size: 1.125rem;
+            font-size: 1rem;
             text-align: center;
             color: #4b5563;
             margin-bottom: 1rem;
         }
 
         .date-time {
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             font-weight: 600;
             text-align: center;
             color: #1f2937;
@@ -210,10 +239,10 @@
         }
 
         .location {
-            font-size: 1.125rem;
+            font-size: 1rem;
             text-align: center;
             color: #4b5563;
-            margin-bottom: 1rem;
+            margin-bottom: 0.7rem;
         }
 
         /* Button styling */
@@ -257,7 +286,7 @@
         /* Responsive adjustments */
         @media (max-width: 640px) {
             .card-container {
-                height: 450px;
+                height: 700px;
             }
 
             .front-title {
@@ -274,8 +303,29 @@
             }
 
             .date-time {
-                font-size: 1.1rem;
+                font-size: 1rem;
             }
+
+            .content {
+                flex-direction: column;
+            }
+
+            .left-side {
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+
+            .right-side {
+                width: 50%;
+                
+            }
+
+            .right-side>img {
+                width: 100%;
+                height: auto;
+                border-radius: 5%;
+            }
+
         }
 
         @media (max-width: 480px) {
@@ -284,11 +334,16 @@
             }
 
             .card-container {
-                height: 450px;
+                height: 550px;
             }
 
             .card-inside {
                 padding: 1.5rem;
+            }
+
+            .right-side>img {
+                width: 100%;
+                border-radius: 5%;
             }
         }
     </style>
@@ -322,44 +377,57 @@
         </div>
 
         <div class="card-inside">
-            <div class="content-section delay-1">
-                <h1 class="card-title">Thân Mời</h1>
-                <div class="divider"></div>
+            <div class="content">
+
+                <div class="content-section right-side delay-2">
+                    <div class="content-section delay-1">
+                        <h1 class="card-title">Thân Mời</h1>
+                        <div class="divider"></div>
+                    </div>
+                    <img src="./Sau2.png" alt="Picture">
+                </div>
+                <div class="left-side">
+
+
+                    <div class="content-section delay-3">
+                        <p class="card-text">
+                            Mời anh/chị đến tham gia <br> <strong>Lễ tốt nghiệp</strong> của <strong> Lê Thanh Tỷ
+                            </strong>.
+                        </p>
+                        <p class="date-time">
+                            Thứ Hai, ngày 14 tháng 7 năm 2025
+                        </p>
+                        <p class="card-text">
+                            Vào lúc 8:00 - 12:00 ( Dự kiến )
+                        </p>
+                        <p class="location">
+                            Tại: 280 Đ.An Dương Vương, Phường 4, Quận 5, TP.HCM
+                            <br><i>Trong Trường Đại học Sư Phạm Tp Hồ Chí Minh</i>
+                        </p>
+                    </div>
+                    <!-- 
+                <div class="content-section delay-3">
+                    <p class="card-text">Rất mong được đón tiếp anh/chị tham gia <strong>Lễ tốt nghiệp</strong></p>
+                </div> -->
+
+                    <div class="content-section delay-4">
+                        <p class="footer-text">Sự hiện diện của anh/chị sẽ khiến ngày kỷ niệm thêm đáng nhớ.</p>
+                    </div>
+
+                    <!-- Decorative corner elements -->
+                    <svg class="decoration" style="top: 10px; left: 10px; width: 40px; height: 40px;"
+                        viewBox="0 0 100 100">
+                        <path d="M10,10 Q50,10 50,50 Q50,90 90,90" stroke="#ffb6c1" stroke-width="2" fill="none"></path>
+                    </svg>
+
+                    <svg class="decoration" style="bottom: 10px; right: 10px; width: 40px; height: 40px;"
+                        viewBox="0 0 100 100">
+                        <path d="M10,10 Q50,10 50,50 Q50,90 90,90" stroke="#ffb6c1" stroke-width="2" fill="none"
+                            transform="rotate(180 50 50)"></path>
+                    </svg>
+                </div>
+
             </div>
-
-            <div class="content-section delay-2">
-                <p class="card-text">
-                    Mời anh/chị đến tham gia <br> <strong>Lễ tốt nghiệp</strong> của <strong>Lê Thanh Tỷ</strong>.
-                </p>
-                <p class="date-time">
-                    Thứ Hai, ngày 14 tháng 7 năm 2025
-                </p>
-                <p class="card-text">
-                    Vào lúc 9:00 giờ ( Dự kiến )
-                </p> 
-                <p class="location">
-                    Tại: 280  Đ.An Dương Vương, Phường 4, Quận 5, TP.HCM
-                    <br><i>Trong Trường Đại học Sư Phạm Tp Hồ Chí Minh</i>
-                </p>
-            </div>
-
-            <div class="content-section delay-3">
-                <p class="card-text">Rất mong được đón tiếp anh/chị tham gia <strong>Lễ tốt nghiệp</strong></p>
-            </div>
-
-            <div class="content-section delay-4">
-                <p class="footer-text">Xin cảm ơn.</p>
-            </div>
-
-            <!-- Decorative corner elements -->
-            <svg class="decoration" style="top: 10px; left: 10px; width: 40px; height: 40px;" viewBox="0 0 100 100">
-                <path d="M10,10 Q50,10 50,50 Q50,90 90,90" stroke="#ffb6c1" stroke-width="2" fill="none"></path>
-            </svg>
-
-            <svg class="decoration" style="bottom: 10px; right: 10px; width: 40px; height: 40px;" viewBox="0 0 100 100">
-                <path d="M10,10 Q50,10 50,50 Q50,90 90,90" stroke="#ffb6c1" stroke-width="2" fill="none"
-                    transform="rotate(180 50 50)"></path>
-            </svg>
         </div>
     </div>
 
